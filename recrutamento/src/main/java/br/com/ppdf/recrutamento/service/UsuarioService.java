@@ -24,6 +24,18 @@ public class UsuarioService {
         
         Visitante visitante = visitanteService.getVisitanteByName(agendamento.getNome());
         
-        System.out.println("Visita agendada para o usuário " + agendamento.getNome() + " na data " + agendamento.getDataHora());
+        System.out.println("Visita agendada para o usuário " + visitante.getPessoa().getNome() + " na data " + agendamento.getDataHora());
+    }
+
+
+    public boolean validateUser(String username, String password) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'validateUser'");
+    }
+
+
+    public String generateOAuth2Token(String username) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'generateOAuth2Token'");
     }
 }

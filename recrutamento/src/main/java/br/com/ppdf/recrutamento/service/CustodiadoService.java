@@ -2,7 +2,6 @@ package br.com.ppdf.recrutamento.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import br.com.ppdf.recrutamento.entity.Custodiado;
@@ -22,8 +21,8 @@ public class CustodiadoService {
         return repository.findAll();
     }
 
-    public Custodiado getCustodiadoById(Integer id) {
-        return repository.findById(id.longValue()).orElse(null);
+    public Custodiado getCustodiadoById(Long id) {
+        return repository.findById(id ).orElse(null);
     }
 
     public Custodiado getCustodiadoByName(String nome) {
@@ -33,8 +32,8 @@ public class CustodiadoService {
         return repository.findByNumeroProntuario(numero);
     }
 
-    public Custodiado updateCustodiado(Integer custodiadoId,Custodiado custodiado) {
-        Custodiado existeCustodiado = repository.findById(custodiadoId.longValue()).orElse(null);
+    public Custodiado updateCustodiado(Long custodiadoId,Custodiado custodiado) {
+        Custodiado existeCustodiado = repository.findById(custodiadoId ).orElse(null);
         //existeCustodiado.setName(custodiado.getName());
         //existeCustodiado.setQuantity(custodiado.getQuantity());
        // existeCustodiado.setPrice(custodiado.getPrice());

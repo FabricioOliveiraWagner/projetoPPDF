@@ -1,5 +1,6 @@
 package br.com.ppdf.recrutamento.entity;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 import jakarta.persistence.Entity;
@@ -15,11 +16,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Pessoa {
+public class Pessoa  implements Serializable {
     
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
     private String nome;
     private String cpf;
     private Timestamp dataNascimento;

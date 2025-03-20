@@ -8,4 +8,6 @@ import br.com.ppdf.recrutamento.entity.AgendamentoVisita;
 @Repository
 public interface AgendamentoVisitaRepository extends JpaRepository<AgendamentoVisita, Long> {
 
+    AgendamentoVisita findByVisitantePessoaNome(String nome);
+
 }

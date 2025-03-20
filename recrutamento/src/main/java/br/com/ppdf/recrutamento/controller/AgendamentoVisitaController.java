@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.ppdf.recrutamento.dto.AgendamentoVisitaDTO;
+
 import br.com.ppdf.recrutamento.entity.AgendamentoVisita;
 import br.com.ppdf.recrutamento.service.AgendamentoVisitaService;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,7 +28,7 @@ public class AgendamentoVisitaController{
     }
        @PutMapping("/atualizarVisita/{id}")
     public AgendamentoVisita atualizarVisita(@PathVariable Long id, @RequestBody AgendamentoVisita visita) {
-        return agendamentoVisitaService.atualizarAgendamentoVisita(id, visita);
+        return service.atualizarAgendamentoVisita(id, visita);
     }
    
      @PostMapping("path")

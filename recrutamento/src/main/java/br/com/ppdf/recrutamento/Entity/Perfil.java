@@ -1,5 +1,7 @@
 package br.com.ppdf.recrutamento.entity;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -13,10 +15,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Perfil{
+public class Perfil implements Serializable {
 
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
     private String descricao;
 }

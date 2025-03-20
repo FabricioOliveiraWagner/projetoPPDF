@@ -23,21 +23,21 @@ public class AgendamentoVisitaService {
         return repository.findAll();
     }
 
-    public AgendamentoVisita getAgendamentoVisitaById(Integer id) {
-        return repository.findById(id.longValue()).orElse(null);
+    public AgendamentoVisita getAgendamentoVisitaById(Long id) {
+        return repository.findById(id ).orElse(null);
     }
 
     public AgendamentoVisita getAgendamentoVisitaByName(String nome) {
-        return repository.findByPessoaNome(nome);
+        return repository.findByVisitantePessoaNome(nome);
     }
 
-    public String cancelarAgendamentoVisita(Integer id) {
-        repository.deleteById(id.longValue());
+    public String cancelarAgendamentoVisita(Long id) {
+        repository.deleteById(id );
         return "AgendamentoVisita cancelada !! " + id;
     }
 
-    public AgendamentoVisita atualizarAgendamentoVisita(Integer agendamentovisitaId,AgendamentoVisita agendamentovisita) {
-        AgendamentoVisita existeAgendamentoVisita = repository.findById(agendamentovisitaId.longValue()).orElse(null);
+    public AgendamentoVisita atualizarAgendamentoVisita(Long agendamentovisitaId,AgendamentoVisita agendamentovisita) {
+        AgendamentoVisita existeAgendamentoVisita = repository.findById(agendamentovisitaId ).orElse(null);
         //existeAgendamentoVisita.setPessoa(agendamentovisita.getVisitante().);
        
         return repository.save(existeAgendamentoVisita);
